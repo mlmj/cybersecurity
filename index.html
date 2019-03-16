@@ -141,3 +141,44 @@
         else if(letters == null) {
           alert("Your password cannot be all numbers. Try again.")
         }
+
+        else if(input == input.toLowerCase()){
+	        alert("You should have at least one upper case in your password! Try again.")
+	      }
+
+        else if(pattern.test(input)) {
+          alert("Nice use of specialized characters!")
+
+        }
+
+        else {
+          alert("Congrats! You have a strong password!!!")
+        }
+
+        }
+        
+        
+      </script>
+      <form onsubmit= getInput() method="get" style= "font-size: 25px;">
+       
+      Enter a password: <input type="text" name="fname" id="userInput"><br>
+    </p>
+  <div id="changeText"></div> 
+    <script>
+      var text = ["TIPS: Experts now recommend having at least 13 characters in your password to avoid being hacked.", "TIPS: Two factor authentications (emailing you after confirming a password) add another layer of protection.", "TIPS: Don’t write your passwords down. Password managers even fill out your info for you on websites.", "TIPS: Don’t use your personal information and try to change your passwords on a regular basis.","TIPS: 2,000,000 accounts on Adobe can be unlocked with the password “123456.”"]; 
+var counter = 0;
+var elem = document.getElementById("changeText");
+var inst = setInterval(change, 8000);
+
+function change() {
+  elem.innerHTML = text[counter];
+  counter++;
+  if (counter >= text.length) {
+    counter = 0;
+    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+  }
+}
+</script>
+</div>
+  </body>
+</html>
